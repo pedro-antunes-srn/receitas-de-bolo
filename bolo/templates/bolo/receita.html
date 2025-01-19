@@ -1,11 +1,7 @@
 {% extends 'bolo/base.html' %}
-
-
 {% block content %}
     <div class="bolo">
-        <div>
                <h1> {{ bolo.bolo }} criado por {{bolo.criador}} </h1>
-            </div>
         <p>ingredientes:</p>
         <p>{{ bolo.ingredientes|linebreaksbr }}</p>
         <hr>
