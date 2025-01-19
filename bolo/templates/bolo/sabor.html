@@ -1,32 +1,14 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-  >    <title>Receitas</title>
-  </head>
-  <body>
-    <div>
-      <h1><a href="/">Receitas Simples e doces</a></h1>
-  </div>
-  
+{% extends 'bolo/base.html' %}
+{% block content %}
   {% for bolo in bolos %}
-      <div>
-        <hr>
-          <p>{{ bolo.criador }}</p>
-          <hr>
-          <h2><a href="">{{ bolo.bolo }}</a></h2>
-          <hr>
-          <p>{{ bolo.ingredientes|linebreaksbr }}</p>
-          <hr>
-          <p>{{ bolo.preparo|linebreaksbr }}</p>
-          <hr>
+  
+    
+
+      <div class="bolo">
+          <div class="">
+            <h2><a href="{% url 'receita'  slug=bolo.slug %}">{{ bolo.bolo }}</a></h2>
+            <h3>criado por {{ bolo.criador}}</h3>
+          </div>
       </div>
   {% endfor %}
-  
-  </body>
-</html>
+  {% endblock %}
