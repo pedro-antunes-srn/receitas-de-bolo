@@ -3,7 +3,7 @@
   {% for bolo in bolos %}
       <div class="post">
           <div class="date">
-            <h2><a href="{% url 'receita'  slug=bolo.slug %}">{{ bolo.bolo }}</a></h2>
+            <h2><a href="{% url 'receita'  slug=bolo.slug %}">{{ bolo.bolo }}</a></h2> 
             <h3>criado por {{ bolo.criador}}</h3>
             <hr>
           </div>

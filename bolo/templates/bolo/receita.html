@@ -2,11 +2,13 @@
 {% block content %}
     <div class="bolo">
                <h1> {{ bolo.bolo }} criado por {{bolo.criador}} </h1>
-        <p>ingredientes:</p>
+        <h3>ingredientes:</h3>
         <p>{{ bolo.ingredientes|linebreaksbr }}</p>
         <hr>
+        <h3>modo de preparo:</h3>
         <p>{{ bolo.preparo|linebreaksbr }}</p>
         <hr>
+        <h3>preço:</h3>
         <p>o valor total dos ingredientes fica {{ bolo.preco }} reais</p>
     </div>
 {% endblock %}
