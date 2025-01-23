@@ -1,4 +1,5 @@
 {% extends 'bolo/base.html' %}
+
 {% block content %}
     <div class="bolo">
                <h1> {{ bolo.bolo }} criado por {{bolo.criador}} </h1>
@@ -10,5 +11,6 @@
         <hr>
         <h3>preço:</h3>
         <p>o valor total dos ingredientes fica {{ bolo.preco }} reais</p>
+        <img src='{{bolo.immagem}}' alt='' width="600px" >
     </div>
 {% endblock %}

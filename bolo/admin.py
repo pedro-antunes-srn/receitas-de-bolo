@@ -10,8 +10,8 @@ class BoloAdmin(admin.ModelAdmin):
     list_filter = ['criador','bolo' ,'preco']
     search_fields = ['criador', 'bolo',]
     prepopulated_fields = {'slug': ['bolo']}
-    fields = ('criador',('bolo', 'slug'),'ingredientes','preparo','preco', )
-  
+    fields = ('criador',('bolo', 'slug'),'ingredientes','preparo','preco','immagem' )
+    
       
 
 admin.site.register(Bolo, BoloAdmin)
