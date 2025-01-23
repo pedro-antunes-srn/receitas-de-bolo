@@ -10,6 +10,7 @@ class Bolo(models.Model):
     preco = models.SmallIntegerField(" R$")
     slug = models.SlugField(max_length=60)
     immagem = models.URLField(default='https://sl.bing.net/jIgqWq3ske')
+    calda = models.TextField(null=True)
     
     def __str__(self):
         return self.bolo + '  criado por ' + self.criador
