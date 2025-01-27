@@ -10,7 +10,7 @@ class BoloAdmin(admin.ModelAdmin):
     list_filter = ['criador','bolo' ,'preco']
     search_fields = ['criador', 'bolo',]
     prepopulated_fields = {'slug': ['bolo']}
-    fields = ('criador',('bolo', 'slug'),'ingredientes','preparo','preco','immagem' )
+    fields = ('criador',('bolo', 'slug'),'ingredientes','calda','preparo','preparo_calda','preco','immagem', )
     
       
 

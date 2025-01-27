@@ -1,0 +1,15 @@
+{% extends 'bolo/base.html' %}
+
+{% block content %}
+
+<form action="{% url 'cadastro'%}" method="post"> {% csrf_token %}
+
+        <table>
+            {{form_cad.as_table}}
+        </table>
+        <input type="submit" value="cadastro">
+    </form>
+    <h3><a href="{%url 'login'%}">se você já tem cadastro clique aqui</a></h3>
+
+{% endblock %}
+

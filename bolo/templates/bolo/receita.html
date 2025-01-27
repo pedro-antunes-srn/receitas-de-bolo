@@ -9,7 +9,13 @@
         <h3>modo de preparo:</h3>
         <p>{{ bolo.preparo|linebreaksbr }}</p>
         <hr>
-        <h3>preço:</h3>
+        {% if bolo.calda %}
+            <h3>ingredientes da calda:<h3>
+            <p>{{bolo.calda}}<p>
+            <h3>preparo da calda:<h3>
+            <p>{{bolo.preparo_calda}}<p>
+        {% endif %}
+                <h3>preço:</h3>
         <p>o valor total dos ingredientes fica {{ bolo.preco }} reais</p>
         <img src='{{bolo.immagem}}' alt='' width="600px" >
     </div>

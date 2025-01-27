@@ -9,11 +9,26 @@ class Bolo(models.Model):
     preparo = models.TextField()
     preco = models.SmallIntegerField(" R$")
     slug = models.SlugField(max_length=60)
-    immagem = models.URLField(default='https://sl.bing.net/jIgqWq3ske')
-    calda = models.TextField(null=True)
+    immagem = models.URLField(default='https://cooknenjoy.com/wp-content/uploads/2020/06/bolo-abobora-02.jpg')
+    calda = models.TextField(null=True, blank=True)
+    preparo_calda = models.TextField(null=True, blank=True)
     
     def __str__(self):
         return self.bolo + '  criado por ' + self.criador
         
+    
+class cadastro(models.Model):
+    email = models.EmailField()
+    nome = models.CharField(default='', max_length=22)
+    senha = models.CharField(max_length=15)
         
-# Create your models here.
+    def __str__(self):
+         return self.nome
+    
+     
+class login(models.Model):
+    nome= models.CharField(default='', max_length=22)
+    senha= models.CharField(max_length=15)
+    def __str__(self):
+            return self.nome_log
+    
