@@ -30,5 +30,5 @@ class login(models.Model):
     nome= models.CharField(default='', max_length=22)
     senha= models.CharField(max_length=15)
     def __str__(self):
-            return self.nome_log
+            return self.nome
     

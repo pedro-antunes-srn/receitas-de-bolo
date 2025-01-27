@@ -4,7 +4,6 @@ from django.http import HttpResponse
 from .models import Bolo
 from .forms import cadastro_form, login_form
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login 
 
 def cadastros(request):
@@ -37,24 +36,27 @@ def logviu(request):
         user = authenticate(username=username, password=senha)
         if user:
             login(request, user)
-            bolos = Bolo.objects.all()
             return redirect('sabor')
         else: 
             
-            return redirect(login) 
+            return redirect('login')
             
             
      
    
-@login_required(login_url='login')
+   
+   
 def sabor(request):
+    if request.user.is_authenticated:
         bolos = Bolo.objects.all()
         return render(request, 'bolo/sabor.html', {'bolos': bolos})
-        
+    return redirect('login')
 
-@login_required(login_url='login')
+
+
 def receita(request, slug):
+    if request.user.is_authenticated:
         bolo = get_object_or_404(Bolo, slug=slug)
         return render(request, 'bolo/receita.html', {'bolo': bolo})
-    
+    return redirect('login')
 

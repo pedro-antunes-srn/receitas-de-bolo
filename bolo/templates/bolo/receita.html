@@ -1,6 +1,6 @@
 {% extends 'bolo/base.html' %}
 
-{% block content %}
+{% block content %} {% csrf_token %}
     <div class="bolo">
                <h1> {{ bolo.bolo }} criado por {{bolo.criador}} </h1>
         <h3>ingredientes:</h3>
