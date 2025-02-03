@@ -1,0 +1,160 @@
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #343a40 !important;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+/* Estilos para os cartões de bolo */
+.card {
+    border: 1px solid #198754;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header,
+.card-footer {
+    background-color: transparent;
+    border-color: #198754;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #198754;
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+/* Layout responsivo para os cartões */
+.row-cols-3,
+.row-cols-md-2,
+.row-cols-lg-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row-cols-3 .card,
+.row-cols-md-2 .card,
+.row-cols-lg-4 .card {
+    margin: 10px;
+}
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #343a40 !important;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+/* Estilos para os cabeçalhos */
+h1, h3 {
+    color: #198754;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Estilos para os parágrafos */
+p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Estilos para os cartões de bolo */
+.card {
+    border: 1px solid #198754;
+    border-radius: 5px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header,
+.card-footer {
+    background-color: transparent;
+    border-color: #198754;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #198754;
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+/* Estilo para os elementos de preço */
+hr {
+    border-top: 1px solid #198754;
+}
+
+/* Estilo responsivo para o layout */
+.row-cols-3,
+.row-cols-md-2,
+.row-cols-lg-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row-cols-3 .card,
+.row-cols-md-2 .card,
+.row-cols-lg-4 .card {
+    margin: 10px;
+}
+
+/* Estilo para o botão da barra de navegação */
+.navbar-toggler-icon {
+    background-color: #343a40;
+}
+
+/* Adicione uma margem ao conteúdo */
+.container-fluid {
+    margin-bottom: 30px;
+}

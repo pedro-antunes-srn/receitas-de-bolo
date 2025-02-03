@@ -1,22 +1,50 @@
-{% extends 'bolo/base.html' %}
+{% extends 'bolo/base_sabor.html' %}
 
-{% block content %} {% csrf_token %}
-    <div class="bolo">
-               <h1> {{ bolo.bolo }} criado por {{bolo.criador}} </h1>
+{% block cabecalho %}{% csrf_token %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{%url 'login'%}" >login</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'postagem'%}">publique sua receita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'receitas'%}">veja todas as receitas</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block content %}{% csrf_token %}
+ {% for b in ba %}{% endfor %}
+ <div class='receita' style="margin:20px ;">
+        <h1> {{ bolo.bolo }} criado por {{bolo.criador}} </h1>
         <h3>ingredientes:</h3>
         <p>{{ bolo.ingredientes|linebreaksbr }}</p>
         <hr>
         <h3>modo de preparo:</h3>
         <p>{{ bolo.preparo|linebreaksbr }}</p>
-        <hr>
+       
         {% if bolo.calda %}
-            <h3>ingredientes da calda:<h3>
-            <p>{{bolo.calda}}<p>
-            <h3>preparo da calda:<h3>
-            <p>{{bolo.preparo_calda}}<p>
+        <hr>
+        <h3>ingredientes da calda:<h3>
+        <p>{{bolo.calda}}
+        <hr>
+        <h3>preparo da calda:<h3>
+        <p>{{bolo.preparo_calda}}<p>
+        
         {% endif %}
-                <h3>preço:</h3>
+        <hr>
+        <h3>preço:</h3>
+        <hr>
         <p>o valor total dos ingredientes fica {{ bolo.preco }} reais</p>
-        <img src='{{bolo.immagem}}' alt='' width="600px" >
-    </div>
-{% endblock %}
+        <img src="/media/{{bolo.imagem}}" alt="{{ bolo.imagem }}" style="width:300px;height: 200px;" />
+
+{% endblock  %}

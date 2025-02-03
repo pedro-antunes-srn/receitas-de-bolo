@@ -1,23 +1,8 @@
-from django.db import models
 
-
-
-class Bolo(models.Model):
-    criador = models.CharField(max_length=30)
-    bolo = models.CharField(max_length=30)
-    ingredientes = models.TextField()
-    preparo = models.TextField()
-    preco = models.SmallIntegerField(" R$")
-    slug = models.SlugField(max_length=60)
-    immagem = models.URLField(default='https://cooknenjoy.com/wp-content/uploads/2020/06/bolo-abobora-02.jpg')
-    calda = models.TextField(null=True, blank=True)
-    preparo_calda = models.TextField(null=True, blank=True)
-    
-    def __str__(self):
-        return self.bolo + '  criado por ' + self.criador
-        
-    
-class cadastro(models.Model):
+from django.conf import settings
+from django.db import models    
+from django.utils import timezone
+class Cadastro(models.Model):
     email = models.EmailField()
     nome = models.CharField(default='', max_length=22)
     senha = models.CharField(max_length=15)
@@ -26,9 +11,19 @@ class cadastro(models.Model):
          return self.nome
     
      
-class login(models.Model):
-    nome= models.CharField(default='', max_length=22)
-    senha= models.CharField(max_length=15)
+class Bolo(models.Model):
+    criador = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    bolo = models.CharField(max_length=30)
+    ingredientes = models.TextField(max_length=500)
+    preparo = models.TextField(max_length=500)
+    preco = models.SmallIntegerField(" R$", null=True)
+    slug = models.SlugField(max_length=60)
+    calda = models.TextField(null=True, blank=True,max_length=500)
+    preparo_calda = models.TextField(null=True, blank=True,max_length=500)
+    dataq = models.DateTimeField(default=timezone.now)
+    imagem = models.ImageField(default='')
+   
     def __str__(self):
-            return self.nome
+        return self.bolo
+        
     

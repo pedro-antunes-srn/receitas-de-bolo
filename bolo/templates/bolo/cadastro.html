@@ -1,5 +1,7 @@
 {% extends 'bolo/base.html' %}
-
+{% block cabecalho %}
+<h1><a href="/">Cadastro</a></h1>
+{% endblock %}
 {% block content %}
 
 <form action="{% url 'cadastro'%}" method="post"> {% csrf_token %}

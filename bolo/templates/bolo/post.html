@@ -1,0 +1,18 @@
+{% extends 'bolo/base.html' %}
+{%block cabecalho%}
+<a class="nav-link active" aria-current="page" href="{%url 'receitas'%}">veja todas as receitas</a>
+{%endblock%}
+{% block content %}
+<form action="{% url 'postagem'%}" method="post" enctype="multipart/form-data">  {% csrf_token %}
+
+        <table>
+            {{form.as_table}}
+        </table>
+        
+        <input type="submit" value="enviar receita">
+    </form>
+    
+    <h3><a href="{%url 'receitas'%}">se você quer ver as postagens entre aqui</a></h3>
+    
+
+{% endblock %}
