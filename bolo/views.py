@@ -1,15 +1,12 @@
 
-from datetime import date
 from django.utils import timezone
-from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Bolo
 from .forms import cadastro_form, login_form,create_receita
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
-from PIL import Image
-import os
+
 
 def cadastros(request):
     form = cadastro_form()
