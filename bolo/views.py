@@ -59,7 +59,7 @@ def postagem(request):
                 post.save()
         
                 
-                return HttpResponse(form)
+                return redirect('sabor')
             else:
                 return redirect('postagem')
     return redirect('login')

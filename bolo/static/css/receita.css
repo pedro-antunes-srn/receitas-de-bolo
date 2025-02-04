@@ -1,160 +1,89 @@
 
-/* Estilos para a barra de navegação */
-.navbar {
-    background-color: #f8f9fa;
-    padding: 1rem;
-}
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar-brand,
-.nav-link {
-    color: #343a40 !important;
-}
+        .navbar {
+            background-color: #343a40;
+            padding: 1rem;
+        }
 
-.nav-link.active {
-    font-weight: bold;
-}
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
 
-/* Estilos para os cartões de bolo */
-.card {
-    border: 1px solid #198754;
-    border-radius: 5px;
-    margin: 10px;
-    width: 100%;
-    max-width: 250px;
-    transition: transform 0.3s ease;
-}
+        .navbar a:hover {
+            color: #ffc107;
+        }
 
-.card:hover {
-    transform: scale(1.05);
-}
+        .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-.card-header,
-.card-footer {
-    background-color: transparent;
-    border-color: #198754;
-}
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
 
-.card-title {
-    font-size: 1.25rem;
-    color: #198754;
-}
+        .card {
+            border: 1px solid #28a745;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-.card-body img {
-    width: 100%;
-    height: auto;
-}
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.card-text {
-    color: #6c757d;
-}
+        .card-header, .card-footer {
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            padding: 0.5rem;
+        }
 
-/* Layout responsivo para os cartões */
-.row-cols-3,
-.row-cols-md-2,
-.row-cols-lg-4 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+        .card-body {
+            text-align: center;
+            padding: 1rem;
+        }
 
-.row-cols-3 .card,
-.row-cols-md-2 .card,
-.row-cols-lg-4 .card {
-    margin: 10px;
-}
-/* Estilos para a barra de navegação */
-.navbar {
-    background-color: #f8f9fa;
-    padding: 1rem;
-}
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #28a745;
+        }
 
-.navbar-brand,
-.nav-link {
-    color: #343a40 !important;
-}
+        .card img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+        }
 
-.nav-link.active {
-    font-weight: bold;
-}
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+        }
 
-/* Estilos para os cabeçalhos */
-h1, h3 {
-    color: #198754;
-    margin-top: 20px;
-}
+        .card-footer a {
+            text-decoration: none;
+            color: #28a745;
+            font-weight: bold;
+        }
 
-h1 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-/* Estilos para os parágrafos */
-p {
-    color: #6c757d;
-    line-height: 1.6;
-}
-
-/* Estilos para os cartões de bolo */
-.card {
-    border: 1px solid #198754;
-    border-radius: 5px;
-    margin: 10px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-header,
-.card-footer {
-    background-color: transparent;
-    border-color: #198754;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    color: #198754;
-}
-
-.card-body img {
-    width: 100%;
-    height: auto;
-}
-
-.card-text {
-    color: #6c757d;
-}
-
-/* Estilo para os elementos de preço */
-hr {
-    border-top: 1px solid #198754;
-}
-
-/* Estilo responsivo para o layout */
-.row-cols-3,
-.row-cols-md-2,
-.row-cols-lg-4 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.row-cols-3 .card,
-.row-cols-md-2 .card,
-.row-cols-lg-4 .card {
-    margin: 10px;
-}
-
-/* Estilo para o botão da barra de navegação */
-.navbar-toggler-icon {
-    background-color: #343a40;
-}
-
-/* Adicione uma margem ao conteúdo */
-.container-fluid {
-    margin-bottom: 30px;
-}
+        .card-footer a:hover {
+            color: #ffc107;
+        }

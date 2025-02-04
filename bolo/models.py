@@ -21,7 +21,7 @@ class Bolo(models.Model):
     calda = models.TextField(null=True, blank=True,max_length=500)
     preparo_calda = models.TextField(null=True, blank=True,max_length=500)
     dataq = models.DateTimeField(default=timezone.now)
-    imagem = models.ImageField(default='')
+    imagem = models.ImageField(upload_to='media',default='')
    
     def __str__(self):
         return self.bolo
